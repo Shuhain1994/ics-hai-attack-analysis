@@ -71,33 +71,6 @@ Observed differences remain subtle and insufficient for definitive attribution w
 * Process understanding is critical for meaningful security interpretation
 * Visual analysis alone is often insufficient for parameter-level attacks
 
-## **Repository Structure**
-
-ics-hai-attack-analysis/
-│
-├── data/
-│   ├── raw/                # Original HAI dataset CSV files
-│   └── processed/          # Optional cleaned or filtered data
-│
-├── src/
-│   ├── load_data.py        # Data loading utilities
-│   ├── eda_utils.py        # Visualization helpers
-│   ├── SA08.py             # SA08 analysis script
-│   └── MA06.py             # MA06 analysis script
-│
-├── notebooks/
-│   └── exploratory_analysis.ipynb  # Initial exploratory analysis
-│
-├── reports/
-│   ├── figures/            # Generated plots
-│   └── ICS_HAI_Attack_Analysis.pdf
-│
-├── docs/
-│   ├── dataset_notes.md
-│   └── variable_mapping.md
-│
-└── README.md
-
 ## **How to Reproduce the Analysis**
 
 Place the HAI dataset CSV files into data/
