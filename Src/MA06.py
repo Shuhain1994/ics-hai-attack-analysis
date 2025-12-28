@@ -1,4 +1,3 @@
-import matplotlib.pyplot as plt
 from load_data import load_data
 from pathlib import Path
 
@@ -36,7 +35,7 @@ def plot_MA06_time_series(out_dir):
         cv_col="P1.LCV01D",
         title="MA06 – P1-LC (SP–PV)"
     )
-    fig1.savefig(out_dir / "MA06_SA08_normal_timeseries.png")
+    fig1.savefig(out_dir /"MA06_SA08_normal_timeseries.png")
 
     # ---- P3-LC (SA14) ----
     fig2 = eda_utils.plot_time_series(
@@ -46,7 +45,7 @@ def plot_MA06_time_series(out_dir):
         cv_col="P3.LCP01D",
         title="MA06 – P3-LC (SP–CV)"
     )
-    fig2.savefig(out_dir / "MA06_SA14_normal_timeseries.png")
+    fig2.savefig(out_dir /"MA06_SA14_normal_timeseries.png")
 
     # ---- P1-LC (SA08) ----
     fig3 = eda_utils.plot_time_series(
@@ -56,7 +55,7 @@ def plot_MA06_time_series(out_dir):
         cv_col="P1.LCV01D",
         title="MA06 – P1-LC (SP–PV)"
     )
-    fig3.savefig(out_dir / "MA06_SA08_attack_timeseries.png")
+    fig3.savefig(out_dir /"MA06_SA08_attack_timeseries.png")
 
     # ---- P3-LC (SA14) ----
     fig4 = eda_utils.plot_time_series(
@@ -66,7 +65,7 @@ def plot_MA06_time_series(out_dir):
         cv_col="P3.LCP01D",
         title="MA06 – P3-LC (SP–CV)"
     )
-    fig4.savefig(out_dir / "MA06_SA14_attack_timeseries.png")
+    fig4.savefig(out_dir /"MA06_SA14_attack_timeseries.png")
 
 # =========================
 # 2. 调用函数（关键）
