@@ -103,3 +103,39 @@ Generated figures will be saved to Reports/Figures/.
 ## **License**
 
 This project is provided for educational and research purposes.
+
+## Security Monitoring Implications
+
+This analysis is directly transferable to security monitoring and detection use cases in industrial and SOC-relevant environments.
+
+### Observable Anomalies
+- Abnormal state transitions that deviate from expected control logic (e.g. unexpected latch behavior, irregular SP/PV/CV relationships)
+- Control actions occurring outside of valid operational sequences, indicating potential loss of control authority
+- Process behavior inconsistent with normal physical dynamics, despite otherwise valid communication patterns
+
+### Detection Perspective
+From a monitoring standpoint, the identified anomalies can be treated as **behavior-based indicators** rather than signature-based alerts.  
+Detection logic can be derived by correlating:
+- Process state changes
+- Timing characteristics
+- Control commands versus resulting physical response
+
+This approach enables differentiation between:
+- Legitimate process disturbances or control instability  
+- Security-relevant manipulation of control logic or process variables
+
+### False Positive Considerations
+Not all detected deviations are security incidents. Certain anomalies may be caused by:
+- Normal process transients
+- Controller initialization phases
+- Legitimate operator interventions
+
+Therefore, contextual evaluation and correlation across multiple signals are required to reduce false positives and avoid misclassification of benign process behavior.
+
+### Relevance for SOC and Industrial Security
+The methodology demonstrated in this project aligns with SOC workflows such as:
+- Anomaly detection based on baseline behavior
+- Incident-oriented investigation of abnormal system states
+- Translation of low-level system behavior into actionable monitoring concepts
+
+While the environment is OT/ICS-specific, the analytical approach is applicable to broader security monitoring scenarios where system behavior, rather than individual events, is the primary indicator of compromise.
